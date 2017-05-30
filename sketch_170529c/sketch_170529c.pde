@@ -14,10 +14,10 @@ void draw(){
   background(0);
   rectMode(CENTER);
   if(xdirection > 0 || xdirection < 0){
-    rect(x, y, 50,30);
+    rect(x, y, 50,30, 7, 7, 7, 7);
   }
   else{
-    rect(x, y, 30, 50);
+    rect(x, y, 30, 50, 7, 7, 7, 7);
   }  
 }
 
