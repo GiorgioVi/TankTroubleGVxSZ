@@ -1,7 +1,7 @@
 float x, y, speed, xdirection, ydirection;
 
 void setup(){
-  size(600,600);
+  size(2058,1262);
   x = width/2;
   y = height/2;
   xdirection = 1;
@@ -11,7 +11,8 @@ void setup(){
 }
 
 void draw(){
-  background(0);
+
+background(0);
   rectMode(CENTER);
   if(xdirection > 0 || xdirection < 0){
     rect(x, y, 50,30, 7, 7, 7, 7);
@@ -22,7 +23,9 @@ void draw(){
 }
 
 void keyPressed(){
- if(key == CODED){
+  
+   
+
    if(keyCode == UP){
      ydirection = 1;
      xdirection = 0;
@@ -43,5 +46,8 @@ void keyPressed(){
      ydirection = 0;
      x += speed;
    }
+ 
+      
+   
  }
-}
+ 
