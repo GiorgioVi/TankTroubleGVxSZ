@@ -13,8 +13,8 @@ public class Tank{
     this.shoot = shoot;
     alive = true;
     lives = 3;
-    h = 40;
-    w = 60;
+    h = 20;
+    w = 30;
   }
   public float getUp(){
     return up;
