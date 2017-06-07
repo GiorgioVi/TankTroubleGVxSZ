@@ -6,7 +6,7 @@ public class Tank {
   float w, h, ang;
   boolean turn;
 
-  public Tank(float up, float down, float left, float right, float shoot) {
+  public Tank(float up, float down, float left, float right, float shoot, float x, float y) {
     this.up = up;
     this.down = down;
     this.left = left;
@@ -16,8 +16,9 @@ public class Tank {
     lives = 3;
     h = 20;
     w = 30;
-    x = width/2;
-    y = height/2;
+    ang = 0;
+    this.x = x;
+    this.y = y;
     turn = false;
   }
 
