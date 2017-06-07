@@ -5,9 +5,26 @@ APCS 2nd Semester Final Project Steven Zhang and Giorgio Vidali
 
 <body>
 
-Some key features of our project are
+Player one is the red block, and Player two is the blue block
+
+Player one movement:
+
+A: Move Left
+W: Move Up
+S: Move Down
+D: Move Right
+F: Shoot
+
+Player two movement:
+
+Left Arrow Key: Move Left
+Up Arrow Key: Move Up
+Down Arrow Key: Move Down
+Right Arrow Key: Move Right
+Space: Shoot
 
 
+Choose Map by pressing either 1, 2, or 3
 
 
 </body>
