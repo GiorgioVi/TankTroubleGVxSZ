@@ -173,7 +173,7 @@ void draw() {
   if (g) {
     imageMode(CENTER);
     PImage giorgio = loadImage("i.jpg");
-    giorgio.resize(300, 300);
+    giorgio.resize(550, 550);
     image(giorgio, width/2, height/2);
   }
 }
