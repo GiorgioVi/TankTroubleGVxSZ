@@ -17,7 +17,7 @@ S: Move Down
 
 D: Move Right
 
-F: Shoot
+Q: Shoot
 
 Player two movement:
 
