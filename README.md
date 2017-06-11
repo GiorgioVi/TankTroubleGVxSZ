@@ -31,7 +31,13 @@ Right Arrow Key: Move Right
 
 Space: Shoot
 
+Press r or R to reset 
+
 Choose Map by pressing either 1, 2, or 3
+
+Press 9 for a wonderful surprise
+
+
 
 
 </body>
