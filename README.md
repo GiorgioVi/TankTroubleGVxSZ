@@ -31,7 +31,7 @@ Right Arrow Key: Move Right
 
 Space: Shoot
 
-Press r or R to reset
+Press r or R to reset(only if both players are still alive. Only returns players to the starting position)
 
 Choose Map by pressing either 1, 2, or 3
 
