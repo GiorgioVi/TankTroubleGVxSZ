@@ -31,11 +31,15 @@ Right Arrow Key: Move Right
 
 Space: Shoot
 
-Press r or R to reset 
+Press r or R to reset
 
 Choose Map by pressing either 1, 2, or 3
 
+Since Maps are not fully functional, One should use the maps as a hiding spot from their opponent
+
 Press 9 for a wonderful surprise
+
+
 
 
 
