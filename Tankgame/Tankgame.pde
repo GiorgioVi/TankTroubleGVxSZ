@@ -25,7 +25,7 @@ void setup() {
 }
 
 void draw() {
-
+  
   rectMode(CORNER);
   noStroke();
   background(255);
@@ -148,20 +148,21 @@ void draw() {
   if (mapOn) {
     //translate(-50, -50);
     rectMode(CORNER);
-    if(map1 == 1){
-    map.makeMap(1);
-    }else if(map1 == 2){
-    map.makeMap(2);
-    }else if(map1 == 3){
-    map.makeMap(3);
+    if (map1 == 1) {
+      map.makeMap(1);
+    } else if (map1 == 2) {
+      map.makeMap(2);
+    } else if (map1 == 3) {
+      map.makeMap(3);
     }
-    
   }
   try {
     for (Bullet bmap : blist) {
       if (tank0.hit(bmap)) {
         bmap.show = false;
         explode(0);
+        tank0.lives --;
+        //println(tank0.lives);
       }
     }
   }
@@ -172,6 +173,9 @@ void draw() {
       if (tank1.hit(bmap)) {
         bmap.show = false;
         explode(1);
+        tank1.lives --;
+        //println(tank1.lives);
+        
       }
     }
   }
@@ -183,6 +187,18 @@ void draw() {
     giorgio.resize(550, 550);
     image(giorgio, width/2, height/2);
   }
+  if (tank1.lives < -10) {
+    PImage red = loadImage("red.jpg");
+    imageMode(CENTER);
+    red.resize(600, 600);
+    image(red, width/2, height/2);
+  }
+  if(tank0.lives < -10){
+    PImage blue = loadImage("blue.jpg");
+    imageMode(CENTER);
+    blue.resize(600,600);
+    image(blue, width/2, height/2);
+  }
 }
 
 void keyPressed() {
@@ -190,7 +206,7 @@ void keyPressed() {
   if (keyCode == 82) {
     reset();
   }
-  
+
   if (keyCode == 57) {
     mapOn = false;
     g = true;
@@ -296,14 +312,32 @@ void reset() {
 }
 
 void explode(float f) {
-  PImage exp = loadImage("exp.gif");
-  imageMode(CENTER);
-  exp.resize(100, 100);
   if (f == 0) {
+    PImage exp = loadImage("exp.gif");
+    imageMode(CENTER);
+    exp.resize(100, 100);
     t0 = false;
     image(exp, tank0.x, tank0.y);
+
   } else {
+    PImage exp = loadImage("exp.gif");
+    imageMode(CENTER);
+    exp.resize(100, 100);
     t1 = false; 
     image(exp, tank1.x, tank1.y);
+
+
+  }
+}
+
+
+
+
+void end() {
+  if (tank1.lives == 0) {
+    PImage red = loadImage("red.jpg");
+    imageMode(CENTER);
+    red.resize(600, 600);
+    image(red, width/2, height/2);
   }
 }
