@@ -145,10 +145,17 @@ void draw() {
     ellipse(a.x + 20 * cos(ang1), a.y + 20 * sin(ang1), a.r, a.r);
     tank1.bullets.remove(a);
   }
-  if (map1 ==1 && mapOn) {
+  if (mapOn) {
     //translate(-50, -50);
     rectMode(CORNER);
+    if(map1 == 1){
     map.makeMap(1);
+    }else if(map1 == 2){
+    map.makeMap(2);
+    }else if(map1 == 3){
+    map.makeMap(3);
+    }
+    
   }
   try {
     for (Bullet bmap : blist) {
@@ -183,8 +190,8 @@ void keyPressed() {
   if (keyCode == 82) {
     reset();
   }
-
-  if (keyCode == 50) {
+  
+  if (keyCode == 57) {
     mapOn = false;
     g = true;
     imageMode(CENTER);
@@ -195,6 +202,14 @@ void keyPressed() {
   if (keyCode == 49) {
     mapOn = true;
     map1 = 1;
+  }
+  if (keyCode == 50) {
+    mapOn = true;
+    map1 = 2;
+  }
+  if (keyCode == 51) {
+    mapOn = true;
+    map1 = 3;
   }
   if (keyCode == tank0.shoot) {
     Bullet b = new Bullet(tank0.x + cos(ang0) * 25, tank0.y + sin(ang0) * 25, ang0, true);
